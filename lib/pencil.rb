@@ -6,17 +6,14 @@ class Pencil
     @dura = dura
   end
 
-  def write
+  def get_str
     puts "Begin writing"
     msg = gets.chomp
-    @paper += msg
-    @dura = @dura - msg.length
   end
 
-
-
-
-
-
+  def write(get_str)
+    @paper += get_str
+    @dura = @dura - get_str.length
+  end
 
 end

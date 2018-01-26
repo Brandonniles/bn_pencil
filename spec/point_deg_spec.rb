@@ -13,11 +13,12 @@ RSpec.describe Pencil do
     expect(pillar_pencil.dura).to be_an(Integer)
   end
 
-  it "#write should sub characters for ' ' when dura == 0" do
-    expect(second_pencil.write).to match(/a*\s/)
-  end
+  # it "#write should sub characters for ' ' when dura == 0" do
+  #   expect(second_pencil.write).to match(/a*\s/)
+  # end
 
-  it "#write should change the value of dura" do
-    expect{ pillar_pencil.write }.to change{pillar_pencil.dura}
+  it "#write('hey') should change the value of dura" do
+    expect{ pillar_pencil.write('hey') }.to change{pillar_pencil.dura}.by(-3)
+
   end
 end
