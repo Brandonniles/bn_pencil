@@ -1,5 +1,5 @@
 class Pencil
-  
+
   def initialize()
 
   end
