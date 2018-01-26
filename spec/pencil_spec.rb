@@ -6,4 +6,8 @@ RSpec.describe Pencil do
   it "creates a new pencil" do
     expect(pillar_pencil).to be_an_instance_of Pencil
   end
+
+  it "expects a pencil to have a write method" do
+    expect(pillar_pencil.write).to exist
+  end
 end
