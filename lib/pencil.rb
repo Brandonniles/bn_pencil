@@ -1,8 +1,9 @@
 class Pencil
-  attr_accessor :paper
+  attr_accessor :paper, :dura
 
-  def initialize(paper:)
+  def initialize(paper:, dura:)
     @paper = ''
+    @dura = dura
   end
 
   def write
