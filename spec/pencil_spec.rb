@@ -15,6 +15,10 @@ RSpec.describe Pencil do
     expect(pillar_pencil.dura).to eql(10)
   end
 
+  it "#dura should be an integer" do
+    expect(pillar_pencil.dura).to be_an(Integer)
+  end
+
   # describe 'pillar_pencil.write' do
   #   it "adds a string to the existing string saved as paper" do
   #      allow($stdin).to receive(:gets).and_return("hey this is a test string")
