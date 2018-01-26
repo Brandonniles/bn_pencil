@@ -11,13 +11,6 @@ RSpec.describe Pencil do
     expect(pillar_pencil.paper).to eql('')
   end
 
-  it "#dura returns a pencil's durability" do
-    expect(pillar_pencil.dura).to eql(10)
-  end
-
-  it "#dura should be an integer" do
-    expect(pillar_pencil.dura).to be_an(Integer)
-  end
 
   # describe 'pillar_pencil.write' do
   #   it "adds a string to the existing string saved as paper" do

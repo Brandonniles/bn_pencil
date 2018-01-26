@@ -10,7 +10,13 @@ class Pencil
     puts "Begin writing"
     msg = gets.chomp
     @paper += msg
+    @dura = @dura - msg.length
   end
+
+
+
+
+
 
 
 end

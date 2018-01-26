@@ -1,10 +1,12 @@
 require_relative './pencil'
 
-paper = ''
 
-x = Pencil.new(paper: 'test_paper')
+
+x = Pencil.new(paper: 'test_paper', dura: 20)
+puts x.dura
 x.write
 puts x.paper
-
+puts x.dura
 x.write
 puts x.paper
+puts x.dura
