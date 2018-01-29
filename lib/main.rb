@@ -6,7 +6,7 @@ pencils = []
 
 
 while true
-  puts "\nWelcome to Digi-Pencil:"
+  puts "\nWelcome to Digi-Pencil: (type a number for your selection and hit enter)"
   puts "1. Create a Pencil"
   puts "2. Write"
   puts "3. Sharpen"
