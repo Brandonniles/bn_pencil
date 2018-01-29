@@ -1,19 +1,40 @@
 class Pencil
-  attr_accessor :paper, :dura
+  attr_accessor :paper, :dura, :length, :eraser
 
-  def initialize(paper:, dura:)
+  def initialize(paper:, dura:, length:, eraser:)
     @paper = ''
     @dura = dura
+    @length = length
+    @eraser = eraser
+    @dura_max = dura
   end
 
-  def get_str
-    puts "Begin writing"
+  def write
+    puts "\nBegin writing"
     msg = gets.chomp
+    update_dura(msg)
   end
 
-  def write(get_str)
-    @paper += get_str
-    @dura = @dura - get_str.length
+  def sharpen
+    @length > 0 ? (@dura = @dura_max) && (@length -= 1) : "Cannot sharpen, length is 0."
+  end
+
+  def update_dura(msg)
+    string = []
+    msg.chars.each do |chr|
+      @dura > 0 ? string << chr : string << " "
+      @dura -= 1 if chr =~ /[a-z]/
+      @dura -= 2 if chr =~ /[A-Z]/
+    end
+    @paper += string.join
+    puts "You wrote: #{string.join}"
+  end
+
+  def stats
+    puts "\nPaper says: #{@paper}"
+    puts "Durability: #{@dura}"
+    puts "Length: #{@length}"
+    puts "Eraser: #{@eraser}"
   end
 
 end
