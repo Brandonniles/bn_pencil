@@ -6,6 +6,15 @@
 - I (the developer) solved this kata by using a personal method that could be described as the opposite of TDD.
   - Small chunks of code were written and then tested _after_ completion.
   - Testing was not done with RSpec or any testing frameworks but rather my running the program and checking for the desired output. Similar to writing 2 - 3 tests for the same method, I often would run the program several times to put in various mock data.
+  - In short, this was my process for solving this kata:
+    - Made a check list for all the things each method needed (i.e. write, sharpen, erase, point deg., etc.) See links to some of my lists below:
+      - [Point Degredation list] (https://photos.app.goo.gl/ZztqTKaQfSqTcmgN2)
+      - [Sharpen list] (https://photos.app.goo.gl/qHXqV1tLDaDI6aMv2)
+    - wrote tiny piece of code for one particular item on the list
+    - confirmed the code worked by running it in terminal (several times)
+    - refactored
+    - confirmed that refactored version still worked
+    - crossed off check box for item (item now has done or 'shipped' status)
 
 Now that I have solved the challenge, it is my intention to **redo the kata from scratch** following TDD practices after brushing up on my TDD skills.
 
