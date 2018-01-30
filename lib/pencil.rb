@@ -33,11 +33,11 @@ class Pencil
   def erase
     puts "type string to be erased"
     str = gets.chomp
-    rev = @paper.split(' ').reverse.join(' ')
-    str.length.times { rev.insert(rev.index(str), '~') }
-    rev.slice!(str)
-    revx2 = rev.split(' ').reverse.join(' ')
-    revx2.gsub!('~', ' ')
+    rev_str = str.reverse
+    rev_paper = @paper.reverse
+    str.length.times { rev_paper.insert(rev_paper.index(rev_str), ' ') }
+    rev_paper.slice!(rev_str)
+    revx2 = rev_paper.reverse
     @paper = revx2
   end
 
