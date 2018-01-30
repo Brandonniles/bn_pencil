@@ -17,7 +17,7 @@ def e
 end
 
 def create_pencil(pencils)
-  cp = Pencil.new(paper: '', dura: d, length: l, eraser: e)
+  cp = Pencil.new(paper: '', dura: d, length: l, eraser_dura: e)
   pencils << cp
 end
 
