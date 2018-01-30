@@ -12,6 +12,7 @@
       - Sharpen list: https://photos.app.goo.gl/qHXqV1tLDaDI6aMv2
     - wrote tiny piece of code for one particular item on the list
     - confirmed the code worked by running it in terminal (several times)
+    - used irb to test out ideas and strategies
     - refactored
     - confirmed that refactored version still worked
     - crossed off check box for item (item now has done or 'shipped' status)

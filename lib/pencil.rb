@@ -30,6 +30,17 @@ class Pencil
     puts "You wrote: #{string.join}"
   end
 
+  def erase
+    puts "type string to be erased"
+    str = gets.chomp
+    rev = @paper.split(' ').reverse.join(' ')
+    str.length.times { rev.insert(rev.index(str), '~') }
+    rev.slice!(str)
+    revx2 = rev.split(' ').reverse.join(' ')
+    revx2.gsub!('~', ' ')
+    @paper = revx2
+  end
+
   def stats
     puts "\nPaper says: #{@paper}"
     puts "Durability: #{@dura}"
