@@ -35,25 +35,23 @@ class Pencil
     str = gets.chomp
     rev_str = str.reverse
     rev_paper = @paper.reverse
-    if @eraser_dura > str.length
+    if @eraser_dura >= str.length
       str.length.times { rev_paper.insert(rev_paper.index(rev_str), ' ') }
       rev_paper.slice!(rev_str)
       revx2 = rev_paper.reverse
       @eraser_dura -= str.length
       @paper = revx2
-    elsif (0...@eraser_dura).include?(str.length)
-      delete_chars = str.length - @eraser_dura
+    elsif (0...str.length).include?(@eraser_dura)
       # add a space(s)
-      delete_chars.times { rev_paper.insert(rev_paper.index(rev_str), ' ') }
+      @eraser_dura.times { rev_paper.insert(rev_paper.index(rev_str), ' ') }
       # delete a character(s)
-      rev_paper.slice!(rev_paper.index(rev_str), delete_chars)
+      rev_paper.slice!(rev_paper.index(rev_str), @eraser_dura)
       # update eraser_dura
-      @eraser_dura -= delete_chars
-      revx2 = rev_paper.reverse
-      @paper = revx2
+      @eraser_dura = 0
+      @paper = rev_paper.reverse
     else
       puts 'Eraser is empty'
-    
+
   end
 
 
