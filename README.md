@@ -6,6 +6,7 @@
 - I (the developer) solved this kata by using a personal method that could be described as the opposite of TDD.
   - Small chunks of code were written and then tested _after_ completion.
   - Testing was not done with RSpec or any testing frameworks but rather my running the program and checking for the desired output. Similar to writing 2 - 3 tests for the same method, I often would run the program several times to put in various mock data.
+  - I built an interface in terminal that was constantly running on a loop that allowed me to test different features at any given moment by creating new pencils and testing the features of those pencils.
   - In short, this was my process for solving this kata:
     - Made a check list for all the things each method needed (i.e. write, sharpen, erase, point deg., etc.) See links to some of my lists below:
       - Point Degradation list: https://photos.app.goo.gl/ZztqTKaQfSqTcmgN2
